@@ -1,0 +1,122 @@
+/* style.css */
+
+/* Add Google Fonts for Mongolian */
+    /*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap');*/
+
+    /*body {*/
+    /*    font-family: 'Noto Sans Mongolian', sans-serif;*/
+    /*    background-color: #f0f0f0;*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*}*/
+/* Use San Francisco font on Apple devices */
+body {
+    font-family: "Mogul Montana";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#text {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ffc0cb; /* Light pink */
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff69b4; /* Hot pink */
+}
+
+/* Spin animation for the "Yes" button */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+#body{
+    font-size: 24px;
+    width: 800px !important;
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #ffc0cb;
+    color: #484848;
+}
+#danger{
+    font-size: 20px;
+    width: 500px !important;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #ffc0cb;
+    color: #484848;
+}
+.heart {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    transform: rotate(-45deg);
+    background: #ff69b4;
+    margin: 5px;
+    animation: beat 0.5s infinite alternate;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #ff69b4;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+}
+
+.heart::before {
+    left: 5px;
+    transform: translateX(-5px) translateY(-5px) rotate(-45deg);
+}
+
+.heart::after {
+    left: 0;
+    transform: translateX(5px) translateY(0px) rotate(0deg);
+}
+
+@keyframes beat {
+    to {
+        transform: scale(1.2) rotate(-45deg);
+    }
+}
+.title{
+    margin-left: 40px;
+    margin-right: 40px;
+}
